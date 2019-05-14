@@ -81,7 +81,6 @@ const getListProduct = async (req, res, next) => {
             return next(new Error('NOT_DATA'));
         }
         const getUsers = await User.find().lean();
-        console.log(getProducts);
         const products = [...getProducts];
         const users = [...getUsers]; 
         const result = products.map((product) => {
